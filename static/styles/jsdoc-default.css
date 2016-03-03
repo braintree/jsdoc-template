@@ -72,7 +72,7 @@ h2 {
 
 h3 {
   font-size: 20px;
-  margin: 1.5em 0 0;
+  margin: 2em 0 0;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -301,6 +301,14 @@ footer {
   font-family: Consolas, Monaco, 'Andale Mono', monospace
 }
 
+h4.name {
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-top: 1px solid #999;
+  font-size: 20px;
+}
+
 .details {
   margin-top: 14px;
   font-size: 13px;
@@ -469,9 +477,7 @@ footer {
 }
 
 dl.param-type {
-  border-bottom: 1px solid hsl(0, 0%, 87%);
-  margin-bottom: 30px;
-  padding-bottom: 30px;
+  margin-top: 5px;
 }
 
 .param-type dt, .param-type dd {
