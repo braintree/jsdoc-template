@@ -13,8 +13,9 @@ body {
   color: #4d4e53;
   background-color: white;
   margin: 0 auto;
-  padding: 0 20px;
-
+  padding: 75px 0;
+  max-width: 1000px;
+  width: 100%;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 160%;
@@ -42,39 +43,53 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-weight: 400;
   margin: 0;
+  line-height: 1;
 }
 
 h1 {
   font-weight: 300;
-  font-size: 48px;
-  margin: 1em 0 .5em;
+  font-size: 40px;
+  display: block;
+}
+
+h1 span {
+  color: #999;
+  font-size: 32px;
+  display: block;
+  line-height: 1.5;
 }
 
 h1.page-title {
-  font-size: 48px;
-  margin: 1em 30px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 h2 {
-  font-size: 24px;
-  margin: 1.5em 0 .3em;
+  font-size: 30px;
+  margin: 1.5em 0 0;
 }
 
 h3 {
   font-size: 20px;
-  margin: 1.2em 0 .3em;
+  margin: 1.5em 0 0;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 18px;
-  margin: 1em 0 .2em;
-  color: #4d4e53;
+  font-size: 16px;
+  margin: 1em 0 0;
+  font-weight: bold;
 }
 
 h5, .container-overview .subsection-title {
-  font-size: 120%;
-  letter-spacing: -0.01em;
-  margin: 8px 0 3px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 8px 0 5px 0;
+  font-weight: bold;
+  color: #4D4E53;
+  padding-top: 10px;
 }
 
 h6 {
@@ -92,10 +107,11 @@ tt, code, kbd, samp {
 }
 
 .class-description {
-  font-size: 130%;
-  line-height: 140%;
   margin-bottom: 1em;
   margin-top: 1em;
+  padding: 10px 20px;
+  background-color: #fbfbfb;
+  border: 1px solid #e0e0e0;
 }
 
 .class-description:empty {
@@ -115,7 +131,6 @@ header {
 section {
   display: block;
   background-color: #fff;
-  padding: 0 30px;
 }
 
 .variation {
@@ -127,6 +142,34 @@ section {
   color: #aaa;
   font-style: italic;
   font-weight: lighter;
+}
+
+.rule {
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+  border-top: 1px solid #ccc;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li a {
+  font-weight: bold;
+}
+
+ul ul {
+  padding-top: 5px;
+}
+
+ul li ul {
+  padding-left: 20px;
+}
+
+ul li ul li a {
+  font-weight: normal;
 }
 
 nav {
@@ -158,13 +201,13 @@ nav ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  border: none;
+  padding-left: 0;
 }
 
 nav ul a,
 nav ul a:active {
   font-family: 'Montserrat', sans-serif;
-  line-height: 18px;
-  padding: 0;
   display: block;
   font-size: 12px;
 }
@@ -179,12 +222,18 @@ nav > ul {
   padding: 0 10px;
 }
 
+nav ul li ul {
+  padding-left: 0;
+}
+
 nav > ul > li > a {
   color: #000;
+  padding: 5px 0;
 }
 
 nav ul ul {
   margin-bottom: 10px
+  padding-left: 0;
 }
 
 nav ul ul a {
@@ -194,7 +243,9 @@ nav ul ul a {
 
 nav ul ul a,
 nav ul ul a:active {
-  padding-left: 20px
+  padding-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 nav h2 {
@@ -209,13 +260,15 @@ nav > h2 > a {
    color: hsl(202, 71%, 50%) !important;
 }
 
+
 footer {
   color: hsl(0, 0%, 28%);
   margin-left: 250px;
   display: block;
-  padding: 15px;
   font-style: italic;
-  font-size: 90%;
+  font-size: 70%;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 .ancestors {
@@ -250,18 +303,25 @@ footer {
 
 .details {
   margin-top: 14px;
-  border-left: 2px solid #DDD;
-  line-height: 30px;
+  font-size: 13px;
+  text-align: right;
+  background: #fbfbfb;
+  padding-right: 5px;
 }
 
 .details dt {
-   width: 120px;
-   float: left;
-   padding-left: 10px;
+  display: inline-block;
 }
 
 .details dd {
-   margin-left: 70px
+  display: inline-block;
+  margin: 0;
+}
+
+.details dd a {
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1;
 }
 
 .details ul {
@@ -273,7 +333,6 @@ footer {
 }
 
 .details li {
-   margin-left: 30px
 }
 
 .details pre.prettyprint {
@@ -291,8 +350,9 @@ footer {
 
 .code-caption {
   font-style: italic;
-  font-size: 107%;
   margin: 0;
+  font-size: 16px;
+  color: #999;
 }
 
 .prettyprint {
@@ -301,6 +361,7 @@ footer {
   border-radius: 3px;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);
   overflow: auto;
+  background-color: #fbfbfb;
 }
 
 .prettyprint.source {
@@ -312,7 +373,7 @@ footer {
   line-height: 18px;
   display: block;
   margin: 0 30px;
-  background-color: #fff;
+  background-color: #fbfbfb;
   color: #4D4E53;
 }
 
@@ -547,6 +608,10 @@ dl.param-type {
 @media only screen and (min-width: 320px) and (max-width: 680px) {
   body {
     overflow-x: hidden;
+  }
+
+  #main {
+    padding: 0 30px;
   }
 
   nav {
