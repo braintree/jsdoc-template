@@ -180,6 +180,7 @@ nav {
   overflow: auto;
   position: fixed;
   height: 100%;
+  padding-bottom: 100px;
 }
 
 nav h3 {
