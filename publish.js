@@ -355,12 +355,13 @@ function buildNav(members) {
 
     nav += buildMemberNav(members.classes, 'Classes', seen, linkto);
     nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
-    nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
-    nav += buildMemberNav(members.events, 'Events', seen, linkto);
-    nav += buildMemberNav(members.namespaces, 'Namespaces', seen, linkto);
-    nav += buildMemberNav(members.mixins, 'Mixins', seen, linkto);
-    nav += buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial);
-    nav += buildMemberNav(members.interfaces, 'Interfaces', seen, linkto);
+    // TODO: as needed, comment back in later
+    // nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
+    // nav += buildMemberNav(members.events, 'Events', seen, linkto);
+    // nav += buildMemberNav(members.namespaces, 'Namespaces', seen, linkto);
+    // nav += buildMemberNav(members.mixins, 'Mixins', seen, linkto);
+    // nav += buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial);
+    // nav += buildMemberNav(members.interfaces, 'Interfaces', seen, linkto);
 
     if (members.globals.length) {
         var globalNav = '';
@@ -556,8 +557,8 @@ exports.publish = function(taffyData, opts, tutorials) {
     members.tutorials = tutorials.children;
 
     // output pretty-printed source files by default
-    var outputSourceFiles = conf.default && conf.default.outputSourceFiles !== false 
-        ? true 
+    var outputSourceFiles = conf.default && conf.default.outputSourceFiles !== false
+        ? true
         : false;
 
     // add template helpers
@@ -577,8 +578,8 @@ exports.publish = function(taffyData, opts, tutorials) {
         generateSourceFiles(sourceFiles, opts.encoding);
     }
 
-    if (members.globals.length) { 
-        generate('', 'Global', [{kind: 'globalobj'}], globalUrl); 
+    if (members.globals.length) {
+        generate('', 'Global', [{kind: 'globalobj'}], globalUrl);
     }
 
     // index page displays information from package.json and lists files
@@ -655,6 +656,6 @@ exports.publish = function(taffyData, opts, tutorials) {
             saveChildren(child);
         });
     }
-    
+
     saveChildren(tutorials);
 };
