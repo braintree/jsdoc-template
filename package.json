@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-template",
-  "version": "1.2.0",
+  "version": "1.2.5",
   "description": "Clean and minimal JSDoc 3 Template / Theme, forked from minami",
   "main": "publish.js",
   "scripts": {
