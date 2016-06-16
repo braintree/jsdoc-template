@@ -612,6 +612,15 @@ dl.param-type {
   z-index: 1;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table tbody td {
+  border-top: 1px solid hsl(207, 10%, 86%);
+  padding: 5px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 680px) {
   body {
     overflow-x: hidden;
