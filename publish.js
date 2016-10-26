@@ -298,15 +298,16 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
             var members = find({kind:'member', memberof: item.longname});
 
             if ( !hasOwnProp.call(item, 'longname') ) {
-                itemsNav += '<li>' + linktoFn('', item.name);
+                itemsNav += "<li id='" + item.name.replace('/','_') + "-nav'>" + linktoFn('', item.name);
                 itemsNav += '</li>';
             } else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
-                itemsNav += '<li>' + linktoFn(item.longname, item.name.replace(/^module:/, ''));
+              // replace '/' in url to match ID in some section
+                itemsNav += '<li id="' + item.name.replace('/','_') + '-nav">' + linktoFn(item.longname, item.name.replace(/^module:/, ''));
                 if (methods.length) {
                     itemsNav += "<ul class='methods'>";
 
                     methods.forEach(function (method) {
-                        itemsNav += "<li data-type='method'>";
+                        itemsNav += "<li data-type='method' id='" + item.name.replace('/','_') + "-" + method.name + "-nav'>";
                         itemsNav += linkto(method.longname, method.name);
                         itemsNav += "</li>";
                     });
@@ -349,7 +350,7 @@ function linktoExternal(longName, name) {
  * @return {string} The HTML for the navigation sidebar.
  */
 function buildNav(members) {
-    var nav = '<h2><a href="index.html">Home</a></h2>';
+    var nav = '';
     var seen = {};
     var seenTutorials = {};
 
@@ -375,10 +376,10 @@ function buildNav(members) {
 
         if (!globalNav) {
             // turn the heading into a link so you can actually get to the global page
-            nav += '<h3>' + linkto('global', 'Global') + '</h3>';
+            nav += '<h3 id="global-nav">' + linkto('global', 'Global') + '</h3>';
         }
         else {
-            nav += '<h3>Global</h3><ul>' + globalNav + '</ul>';
+            nav += '<h3 id="global-nav">Global</h3><ul>' + globalNav + '</ul>';
         }
     }
 

@@ -1,22 +1,24 @@
 {
   "name": "jsdoc-template",
-  "version": "1.2.6",
-  "description": "Clean and minimal JSDoc 3 Template / Theme, forked from minami",
+  "version": "0.0.1",
+  "description": "Braintree JSDoc 3 Template",
   "main": "publish.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nijikokun/minami.git"
+    "url": "https://github.com/braintree/jsdoc-template"
   },
-  "author": "Nijiko Yonskai <nijikokun@gmail.com>",
-  "licenses": [{
-    "type": "Apache-2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0"
-  }],
+  "author": "Braintreeps <code@getbraintree.com>",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "bugs": {
-    "url": "https://github.com/Nijikokun/minami/issues"
+    "url": "https://github.com/braintree/jsdoc-template"
   },
-  "homepage": "https://github.com/Nijikokun/minami"
+  "homepage": "https://github.com/braintree/jsdoc-template"
 }
