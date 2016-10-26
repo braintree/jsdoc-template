@@ -229,11 +229,13 @@ samp {
 }
 
 header {
-  display: block
+  display: block;
+  max-width: 1100px;
 }
 
 section {
   display: block;
+  max-width: 1100px;
   background-color: #fff;
 }
 
@@ -589,7 +591,7 @@ footer {
 .name code {
   color: #4D4E53;
   font-family: 'bt_mono', monospace;
-  font-size: 100%;  
+  font-size: 100%;
 }
 
 .params td,
