@@ -5,7 +5,7 @@ $(function() {
         inputSelector: '.search-input',
         debug: false, // Set debug to true if you want to inspect the dropdown
         algoliaOptions: {
-            hitsPerPage: 10
+            hitsPerPage: 7
         }
     });
 })
