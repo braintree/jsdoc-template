@@ -298,24 +298,24 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
             var members = find({kind:'member', memberof: item.longname});
 
             if ( !hasOwnProp.call(item, 'longname') ) {
-                itemsNav += "<li id='" + item.name.replace('/','_') + "-nav'>" + linktoFn('', item.name);
-                itemsNav += '</li>';
+              itemsNav += '<li id="' + item.name.replace('/','_') + '-nav">' + linktoFn('', item.name);
+              itemsNav += '</li>';
             } else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
               // replace '/' in url to match ID in some section
-                itemsNav += '<li id="' + item.name.replace('/','_') + '-nav">' + linktoFn(item.longname, item.name.replace(/^module:/, ''));
-                if (methods.length) {
-                    itemsNav += "<ul class='methods'>";
+              itemsNav += '<li id="' + item.name.replace('/','_') + '-nav">' + linktoFn(item.longname, item.name.replace(/^module:/, ''));
+              if (methods.length) {
+                  itemsNav += "<ul class='methods'>";
 
-                    methods.forEach(function (method) {
-                        itemsNav += "<li data-type='method' id='" + item.name.replace('/','_') + "-" + method.name + "-nav'>";
-                        itemsNav += linkto(method.longname, method.name);
-                        itemsNav += "</li>";
-                    });
+                  methods.forEach(function (method) {
+                      itemsNav += '<li data-type="method" id="' + item.name.replace('/','_') + '-' + method.name + '-nav">';
+                      itemsNav += linkto(method.longname, method.name);
+                      itemsNav += '</li>';
+                  });
 
-                    itemsNav += "</ul>";
-                }
-                itemsNav += '</li>';
-                itemsSeen[item.longname] = true;
+                  itemsNav += '</ul>';
+              }
+              itemsNav += '</li>';
+              itemsSeen[item.longname] = true;
             }
         });
 
