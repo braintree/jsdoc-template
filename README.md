@@ -1,28 +1,23 @@
-# Minami
+# Braintree JSDoc Template
 
-A clean, responsive documentation template theme for JSDoc 3.
+A clean, responsive documentation template with search and navigation highlighting for JSDoc 3.
 
-![Minami Screenshot](http://puu.sh/gOyNe/66c3adcb97.png)
+![Braintree JS Doc Template Screenshot](https://puu.sh/rWvW0/2831fd69d6.png)
+
+## responsive
+
+![Braintree JS Doc Template Screenshot](https://puu.sh/rWvZ6/aee92a4787.png)
 
 ## Uses
 
 - [the Taffy Database library](http://taffydb.com/)
 - [Underscore Template library](http://documentcloud.github.com/underscore/#template)
-- [Montserrat](http://www.google.com/fonts/specimen/Monsterrat) & Helvetica Neue
-
-## Install
-
-```bash
-$ npm install --save-dev minami
-```
+- [Algolia DocSearch](https://community.algolia.com/docsearch/)
 
 ## Usage
 
 Clone repository to your designated `jsdoc` template directory, then:
 
-```bash
-$ jsdoc entry-file.js -t path/to/minami
-```
 
 ### Node.js Dependency
 
@@ -38,7 +33,7 @@ In your `.jsdoc.json` file, add a template option.
 
 ```json
 "opts": {
-  "template": "node_modules/minami"
+  "template": "node_modules/jsdoc-template"
 }
 ```
 
@@ -67,7 +62,7 @@ In your `.jsdoc.json` file, add a template option.
         "encoding": "utf8",
         "private": true,
         "recurse": true,
-        "template": "./node_modules/minami"
+        "template": "./node_modules/jsdoc-template"
     }
 }
 ```
