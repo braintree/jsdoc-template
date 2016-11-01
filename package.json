@@ -4,7 +4,8 @@
   "description": "Braintree JSDoc 3 Template",
   "main": "publish.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
