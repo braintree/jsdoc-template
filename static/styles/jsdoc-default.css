@@ -624,6 +624,10 @@ dl.param-type {
 
 /* tag source style */
 
+.tag-deprecated {
+  padding-right: 5px;
+}
+
 .tag-source {
     border-bottom: 1px solid rgba(28, 160, 224, 0.35);
 }
