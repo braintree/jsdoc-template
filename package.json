@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Braintree JSDoc 3 Template",
   "main": "publish.js",
   "scripts": {
