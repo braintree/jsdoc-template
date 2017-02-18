@@ -159,7 +159,6 @@ h4 {
 h4.name {
     font-size: 20px;
     margin-top: 0;
-    padding-top: 1em;
     font-weight: 500;
 }
 
@@ -930,4 +929,37 @@ input.search-input:focus {
 
 .hljs-strong {
     font-weight: bold
+}
+
+.icon:before {
+  display: inline-block;
+  /*  font-family: 'bt-iconfont'; */
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  position: absolute;
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  text-rendering: optimizeLegibility;
+}
+
+.icon--link {
+  opacity: 0;
+  position: absolute;
+  margin-left: -25px;
+}
+
+.link-title:hover .icon--link {
+  opacity: 1;
+}
+
+.name-container {
+  display: flex;
+  padding-top: 1em;
 }
