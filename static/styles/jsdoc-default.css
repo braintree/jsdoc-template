@@ -931,32 +931,16 @@ input.search-input:focus {
     font-weight: bold
 }
 
-.icon:before {
-  display: inline-block;
-  /*  font-family: 'bt-iconfont'; */
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-transform: none;
-  position: absolute;
-
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  speak: none;
-  text-rendering: optimizeLegibility;
-}
-
-.icon--link {
+.link-icon {
   opacity: 0;
   position: absolute;
   margin-left: -25px;
+  padding-right: 5px;
+  padding-top: 2px;
 }
 
-.link-title:hover .icon--link {
-  opacity: 1;
+.name-container:hover .link-icon {
+  opacity: .5;
 }
 
 .name-container {
