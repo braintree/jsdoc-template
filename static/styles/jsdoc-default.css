@@ -159,7 +159,6 @@ h4 {
 h4.name {
     font-size: 20px;
     margin-top: 0;
-    padding-top: 1em;
     font-weight: 500;
 }
 
@@ -930,4 +929,21 @@ input.search-input:focus {
 
 .hljs-strong {
     font-weight: bold
+}
+
+.link-icon {
+  opacity: 0;
+  position: absolute;
+  margin-left: -25px;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+
+.name-container:hover .link-icon {
+  opacity: .5;
+}
+
+.name-container {
+  display: flex;
+  padding-top: 1em;
 }
