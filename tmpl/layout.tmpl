@@ -1,3 +1,7 @@
+<?js
+var templates = env.conf.templates;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +81,9 @@ mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script><!-- end Mixpanel -->
     </div>
 
     <nav>
-        <h3 class="reference-title">Braintree.js Client Reference</h3>
+        <h3 class="reference-title">
+          <?js= templates.referenceTitle || 'Braintree SDK Client Reference' ?>
+        </h3>
 
         <?js= this.nav ?>
     </nav>

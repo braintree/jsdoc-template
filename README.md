@@ -54,8 +54,7 @@ In your `.jsdoc.json` file, add a template option.
         "plugins/markdown"
     ],
     "templates": {
-        "cleverLinks": false,
-        "monospaceLinks": true
+        "referenceTitle": "My SDK Name"
     },
     "opts": {
         "destination": "./docs/",
