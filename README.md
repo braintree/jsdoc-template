@@ -73,7 +73,7 @@ If you would like to enable [Algolia DocSearch](https://community.algolia.com/do
     "search": {
         "apiKey": "your-api-key",
         "indexName": "Your index name. Defaults to braintree.",
-        "hisPerPage": "Number of Results to show. Defaults to 7.",
+        "hitsPerPage": "Number of Results to show. Defaults to 7.",
     }
 }
 ```
