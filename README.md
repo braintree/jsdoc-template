@@ -54,8 +54,7 @@ In your `.jsdoc.json` file, add a template option.
         "plugins/markdown"
     ],
     "templates": {
-        "cleverLinks": false,
-        "monospaceLinks": true
+        "referenceTitle": "My SDK Name"
     },
     "opts": {
         "destination": "./docs/",
@@ -63,6 +62,18 @@ In your `.jsdoc.json` file, add a template option.
         "private": true,
         "recurse": true,
         "template": "./node_modules/jsdoc-template"
+    }
+}
+```
+
+If you would like to enable [Algolia DocSearch](https://community.algolia.com/docsearch/), you can pass a `search` object into the `templates` object.
+
+```json
+"templates": {
+    "search": {
+        "apiKey": "your-api-key",
+        "indexName": "Your index name. Defaults to braintree.",
+        "hisPerPage": "Number of Results to show. Defaults to 7.",
     }
 }
 ```
