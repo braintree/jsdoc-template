@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-  var target;
+  var currentSectionNav, target;
 
   // If an anchor hash is in the URL highlight the menu item
   highlightActiveHash();
@@ -9,7 +9,11 @@ $(document).ready(function () {
   highlightActiveSection();
 
   // If a specific page section is in the URL scroll that section up to the top
-  $('nav').scrollTop($('#' + getCurrentSectionName() + '-nav').position().top);
+  currentSectionNav = $('#' + getCurrentSectionName() + '-nav');
+
+  if (currentSectionNav.position()) {
+    $('nav').scrollTop(currentSectionNav.position().top);
+  }
 
   // function to scroll to anchor when clicking an anchor linl
   $('a[href*="#"]:not([href="#"])').click(function () {
