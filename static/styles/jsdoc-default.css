@@ -87,10 +87,6 @@ p, ul, ol, blockquote {
     margin-bottom: 1em;
 }
 
-p {
-    max-width: 800px;
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: #706d77;
     font-weight: 500;
@@ -216,12 +212,10 @@ tt, code, kbd, samp {
 
 header {
     display: block;
-    max-width: 1100px;
 }
 
 section {
     display: block;
-    max-width: 1100px;
     background-color: #fff;
 }
 
