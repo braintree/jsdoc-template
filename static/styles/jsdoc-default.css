@@ -216,12 +216,12 @@ tt, code, kbd, samp {
 
 header {
     display: block;
-    max-width: 1100px;
+    max-width: 1400px;
 }
 
 section {
     display: block;
-    max-width: 1100px;
+    max-width: 1400px;
     background-color: #fff;
 }
 
