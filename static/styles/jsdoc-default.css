@@ -557,6 +557,10 @@ footer {
     user-select: text;
 }
 
+.readme .prettyprint {
+   max-width: 800px;
+}
+
 .params, .props {
     border-spacing: 0;
     border: 1px solid #ddd;
