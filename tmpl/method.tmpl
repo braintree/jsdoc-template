@@ -116,6 +116,13 @@
 } ?>
 
 <?js if (data.examples && examples.length) { ?>
-  <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
-  <?js= this.partial('examples.tmpl', examples) ?>
+  <div class="example-container">
+    <a class="link-icon" href="<?js= '#' + data.name + '-examples' ?>">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="<?js=  data.name + '-examples' ?>">Example<?js= examples.length > 1? 's':'' ?></h5>
+    <?js= this.partial('examples.tmpl', examples) ?>
+  </div>
 <?js } ?>

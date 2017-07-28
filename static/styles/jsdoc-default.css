@@ -938,6 +938,11 @@ input.search-input:focus {
   padding-top: 2px;
 }
 
+.example-container .link-icon {
+  margin-top: -6px;
+}
+
+.example-container:hover .link-icon,
 .name-container:hover .link-icon {
   opacity: .5;
 }
