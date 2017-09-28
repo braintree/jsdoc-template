@@ -1,5 +1,6 @@
 <?js
   var self = this;
+  var conf = env.conf;
   var isGlobalPage;
 
   docs.forEach(function(doc, i) {
@@ -147,6 +148,8 @@
 
     <?js
       var members = self.find({kind: 'member', memberof: isGlobalPage ? {isUndefined: true} : doc.longname});
+      var excludePattern = conf.source.excludePattern;
+      var re = new RegExp(excludePattern);
 
       // symbols that are assigned to module.exports are not globals, even though they're not a memberof anything
       if (isGlobalPage && members && members.length && members.forEach) {
@@ -154,13 +157,15 @@
           return m.longname && m.longname.indexOf('module:') !== 0;
         });
       }
-      
+
       if (members && members.length && members.forEach) {
   ?>
         <h3 class="subsection-title">Members</h3>
 
-        <?js members.forEach(function(p) { ?>
-          <?js= self.partial('members.tmpl', p) ?>
+        <?js members.forEach(function(p) {
+          if (!p.comment.match(re)) { ?>
+            <?js= self.partial('members.tmpl', p) ?>
+          <?js } ?>
         <?js }); ?>
     <?js } ?>
 
