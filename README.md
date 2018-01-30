@@ -54,7 +54,8 @@ In your `.jsdoc.json` file, add a template option.
         "plugins/markdown"
     ],
     "templates": {
-        "referenceTitle": "My SDK Name"
+        "referenceTitle": "My SDK Name",
+        "disableSort": false
     },
     "opts": {
         "destination": "./docs/",
@@ -65,6 +66,8 @@ In your `.jsdoc.json` file, add a template option.
     }
 }
 ```
+
+Note: `referenceTitle` and `disableSort` will affect the output of this theme.
 
 If you would like to enable [Algolia DocSearch](https://community.algolia.com/docsearch/), you can pass a `search` object into the `templates` object.
 
