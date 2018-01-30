@@ -162,7 +162,7 @@
         <h3 class="subsection-title">Members</h3>
 
         <?js members.forEach(function(p) {
-          if (!p.comment.match(excludePattern)) { ?>
+          if (!conf.source.excludePattern || !p.comment.match(excludePattern)) { ?>
             <?js= self.partial('members.tmpl', p) ?>
           <?js } ?>
         <?js }); ?>
