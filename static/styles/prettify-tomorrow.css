@@ -105,6 +105,12 @@ pre.prettyprint {
   padding: 10px; }
 */
 
+/* Get LI elements to show when they are in the main article */
+article ul li {
+  list-style-type: circle;
+  margin-left: 25px;
+}
+
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
