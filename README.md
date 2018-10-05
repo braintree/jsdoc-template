@@ -55,7 +55,11 @@ In your `.jsdoc.json` file, add a template option.
     ],
     "templates": {
         "referenceTitle": "My SDK Name",
-        "disableSort": false
+        "disableSort": false,
+        "collapse": true,
+        "resources": {
+            "google": "https://www.google.com/"
+        }
     },
     "opts": {
         "destination": "./docs/",

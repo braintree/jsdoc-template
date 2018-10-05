@@ -1,6 +1,8 @@
 <?js
 var templates = env.conf.templates;
 var usesSearch = Boolean(templates.search);
+var collapseMenu = templates.collapse;
+var resources = templates.resources;
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +25,9 @@ var usesSearch = Boolean(templates.search);
 
   <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
   <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <?js if (collapseMenu) { ?>
+  <link type="text/css" rel="stylesheet" href="styles/collapse.css">
+  <?js } ?>
 
   <?js if (usesSearch) { ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
@@ -94,6 +99,15 @@ var usesSearch = Boolean(templates.search);
       <?js= templates.referenceTitle || 'Braintree SDK Client Reference' ?>
     </h3>
 
+    <?js if (resources) { ?>
+      <h3>
+        Resources
+      </h3>
+      <?js for (var resource in resources) { ?>
+        <a href="<?js= resources[resource] ?>"><?js= resource ?></a>
+      <?js } ?>
+    <?js } ?>
+
     <?js= this.nav ?>
   </nav>
 
@@ -131,6 +145,6 @@ var usesSearch = Boolean(templates.search);
     });
   </script>
   <?js } ?>
-  
+
 </body>
 </html>
