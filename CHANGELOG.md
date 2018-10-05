@@ -1,5 +1,10 @@
 CHANGELOG
 =========
+unreleased
+-----
+- Added support for templates.collapse option. When set to true only the active component\'s members are expaneded.
+- Added templates.resources option that takes an object where the keys are the labels and the values are links to external resources.
+- Minor css bugfixes
 
 3.2.0
 -----
