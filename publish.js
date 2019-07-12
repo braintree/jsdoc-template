@@ -205,9 +205,11 @@ function getPathFromDoclet(doclet) {
 }
 
 function generate(type, title, docs, filename, resolveLinks) {
+  var packageInfo = (find({kind: 'package'}) || [])[0];
   resolveLinks = resolveLinks !== false;
 
   var docData = {
+    package: packageInfo,
     type: type,
     title: title,
     docs: docs
