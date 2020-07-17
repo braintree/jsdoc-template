@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/braintree/jsdoc-template",
   "devDependencies": {
-    "eslint": "^6.2.2",
+    "eslint": "^7.4.0",
     "eslint-config-braintree": "^4.0.0",
     "taffydb": "^2.7.3"
   }
