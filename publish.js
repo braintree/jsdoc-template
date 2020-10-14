@@ -220,6 +220,11 @@ function generate(type, title, docs, filename, resolveLinks) {
     html = helper.resolveLinks(html); // turn {@link foo} into <a href="foodoc.html">foo</a>
   }
 
+  if (env.conf.templates.postProcess
+      && typeof env.conf.templates.postProcess === 'function') {
+    html = env.conf.templates.postProcess(html);
+  }
+
   fs.writeFileSync(outpath, html, 'utf8');
 }
 
