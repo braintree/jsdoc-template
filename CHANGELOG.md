@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## v3.4.0 (2020-10-15)
 
 * Added a postprocess function option to template config options 
 
