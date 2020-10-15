@@ -5,7 +5,8 @@
   "main": "publish.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "preversion": "./scripts/preversion"
   },
   "repository": {
     "type": "git",
