@@ -3,6 +3,14 @@
   "version": "3.4.0",
   "description": "Braintree JSDoc 3 Template",
   "main": "publish.js",
+  "files": [
+    "static",
+    "tmpl",
+    "publish.js",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "lint": "eslint .",
     "test": "npm run lint",
