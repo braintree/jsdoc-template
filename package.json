@@ -14,7 +14,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "npm run lint",
-    "preversion": "./scripts/preversion"
+    "preversion": "./scripts/preversion",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-braintree": "^5.0.1",
+    "husky": "^9.1.7",
     "taffydb": "^2.7.3"
   }
 }
