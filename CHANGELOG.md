@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## UNRELEASED
+
+- feat(deps): Add conventional commits
+
 ## v3.4.0 (2020-10-15)
 
-* Added a postprocess function option to template config options 
+* Added a postprocess function option to template config options
 
 ## 3.3.0
 
