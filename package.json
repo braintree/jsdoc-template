@@ -14,7 +14,9 @@
   "scripts": {
     "lint": "eslint .",
     "test": "npm run lint",
-    "preversion": "./scripts/preversion"
+    "preversion": "./scripts/preversion",
+    "prepare": "husky",
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -32,8 +34,18 @@
   },
   "homepage": "https://github.com/braintree/jsdoc-template",
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "commitizen": "^4.3.1",
+    "cz-customizable": "^7.5.4",
     "eslint": "^8.13.0",
     "eslint-config-braintree": "^5.0.1",
+    "husky": "^9.1.7",
     "taffydb": "^2.7.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
