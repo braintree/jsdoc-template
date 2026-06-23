@@ -10,14 +10,13 @@ A clean, responsive documentation template with search and navigation highlighti
 
 ## Uses
 
-- [the Taffy Database library](http://taffydb.com/)
+- [JSdoc salty](https://github.com/jsdoc/jsdoc/tree/main/packages/jsdoc-salty)
 - [Underscore Template library](http://documentcloud.github.com/underscore/#template)
 - [Algolia DocSearch](https://community.algolia.com/docsearch/)
 
 ## Usage
 
 Clone repository to your designated `jsdoc` template directory, then:
-
 
 ### Node.js Dependency
 
