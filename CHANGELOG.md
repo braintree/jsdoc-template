@@ -4,6 +4,7 @@
 
 - feat(deps): Add conventional commits
 - build(other): Upgrade to Node 18
+- feat(deps): Remove `taffydb`
 
 ## v3.4.0 (2020-10-15)
 

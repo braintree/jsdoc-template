@@ -7,7 +7,7 @@ var fs = require('jsdoc/fs');
 var helper = require('jsdoc/util/templateHelper');
 var logger = require('jsdoc/util/logger');
 var path = require('jsdoc/path');
-var taffy = require('taffydb').taffy;
+var taffy = require('@jsdoc/salty').taffy;
 var template = require('jsdoc/template');
 var util = require('util');
 
@@ -387,6 +387,7 @@ function buildNav(members) {
 }
 
 /**
+    technically taffyDB object, but we use `@jsdoc/salty` to pull into database form
     @param {TAFFY} taffyData See <http://taffydb.com/>.
     @param {object} opts
     @param {Tutorial} tutorials
