@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 4.0.0
 
 - feat(deps): Add conventional commits
 - build(other): Upgrade to Node 18
